@@ -8,10 +8,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
-<!-- Here instead of name we can also use index tag to inject the values in the data members.(Given below)-->
+	<bean class="com.springcore.lifecycle.xml.Pepsi" name="pepsi" p:string="Babu" init-method="init" destroy-method="destroy"/>
 
-	<bean class="com.springcore.ci_ambiguity.Person" name="person" >
-		<constructor-arg type="int" value="123" index="0"/>
-		<constructor-arg type="int" value="234" index="1"/>
-	</bean>
 </beans>

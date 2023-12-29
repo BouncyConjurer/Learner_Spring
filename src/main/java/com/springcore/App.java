@@ -9,7 +9,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         @SuppressWarnings("resource")
-		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/config.xml");
         
         Student student1 =(Student) context.getBean("student1");
         System.out.println(student1);
