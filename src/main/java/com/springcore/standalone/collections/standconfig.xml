@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:util="http://www.springframework.org/schema/util"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd ">
+
+
+<util:list id="gamesnew" list-class="java.util.LinkedList">
+        <value>Contra</value>
+        <value>GTA 5</value>
+        <value>Halo</value>
+        <!-- Add more items as needed -->
+</util:list>
+
+<util:map id="specsnew" map-class="java.util.TreeMap">
+        <entry key="1" value="RAM" />
+        <entry key="2" value="CPU"/>
+        <entry key="3" value="UPS"/>
+        <!-- Add more items as needed -->
+</util:map>
+
+<util:properties id="landnew">
+	<prop key="Driver">com.jdbc.mysql.Driver</prop>
+	<prop key="Username">BouncyConjurer</prop>	
+</util:properties>
+
+<bean class="com.springcore.standalone.collections.Person" name="person">
+	<property name="games" ref="gamesnew" />
+	<property name="specs" ref="specsnew" />
+	<property name="land" ref="landnew" />
+</bean>
+
+
+
+</beans>

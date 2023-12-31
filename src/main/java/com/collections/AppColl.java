@@ -15,6 +15,7 @@ public class AppColl {
 		System.out.println(coll.getPhones());
 		System.out.println(coll.getCourses());
 		System.out.println(coll.getProp());
+		System.out.println(coll);
 		
 	}
 
